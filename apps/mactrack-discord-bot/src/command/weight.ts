@@ -1,4 +1,5 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
+import { BASE_URL } from '../utils/Constants.js';
 
 export const data = new SlashCommandBuilder()
   .setName('weight')
@@ -15,8 +16,8 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   const body = {
     weight: weight,
   };
-
-  const response = await fetch('http://127.0.0.1:3000/weight', {
+  const url = BASE_URL + '/weight';
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

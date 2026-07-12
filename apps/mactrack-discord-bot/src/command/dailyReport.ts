@@ -1,15 +1,16 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
 import { generateReport } from '../utils/generateReport.js';
 import { reportResponse } from '../types/apiResponse.js';
+import { BASE_URL } from '../utils/Constants.js';
 
 export const data = new SlashCommandBuilder()
   .setName('daily_report')
   .setDescription("Command to generate today's report");
 
 export async function execute(interaction: ChatInputCommandInteraction) {
-  console.log('Requesting daily report');
-
-  const response = await fetch(`http://127.0.0.1:3000/report?mode=today`, {
+  const url = BASE_URL + '/report?mode=today';
+  console.log('URL:', url);
+  const response = await fetch(url, {
     method: 'GET',
   });
   if (!response.ok) {
