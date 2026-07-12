@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/mactrack-rest-api/Dockerfile
+    env_file:
+      - packages/utils/.env
+  discord-bot:
+    build:
+      context: .
+      dockerfile: apps/mactrack-discord-bot/Dockerfile
+    env_file: 
+      - packages/utils/.env
+      - apps/mactrack-discord-bot/
