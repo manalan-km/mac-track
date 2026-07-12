@@ -1,5 +1,5 @@
 import { FastifyPluginAsync } from 'fastify'
-import { databaseClient } from '../utils/database.js'
+import { databaseClient } from '@mactrack/utils'
 import { datePeriodCalculator, Mode } from '../utils/dateCalculator.js'
 
 interface ReportQuerystring {

@@ -1,4 +1,5 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
+import { BASE_URL } from '../utils/Constants.js';
 
 export const data = new SlashCommandBuilder()
   .setName('macro')
@@ -33,9 +34,8 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     fibre: fiber,
     meal_name: mealName,
   };
-  console.log('Body to be sent:', body);
-
-  const response = await fetch('http://127.0.0.1:3000/macros', {
+  const url = BASE_URL + '/macros';
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
