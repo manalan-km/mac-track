@@ -33,7 +33,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
     fibre: fiber,
     meal_name: mealName,
   };
-  console.log('Body to be sent:', body);
 
   const response = await fetch('http://127.0.0.1:3000/macros', {
     method: 'POST',

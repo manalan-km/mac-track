@@ -1,5 +1,6 @@
 import { FastifyPluginAsync } from 'fastify'
-import { databaseClient } from '../utils/database.js'
+import { databaseClient } from '@mactrack/utils'
+
 const macros: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     const macrosSchema = {
         type: 'object',

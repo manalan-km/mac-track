@@ -15,7 +15,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   const body = {
     weight: weight,
   };
-  console.log('Body to be sent:', body);
 
   const response = await fetch('http://127.0.0.1:3000/weight', {
     method: 'POST',

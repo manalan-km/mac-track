@@ -1,5 +1,5 @@
 import { FastifyPluginAsync } from 'fastify'
-import { databaseClient } from '../utils/database.js'
+import { databaseClient } from '@mactrack/utils'
 
 const weight: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
     const weightSchema = {

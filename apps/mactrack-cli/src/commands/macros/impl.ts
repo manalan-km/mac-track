@@ -14,7 +14,6 @@ export default async function (flags: MacrosFlags): Promise<void> {
         fibre: flags.fibre,
         meal_name: flags.meal_name
     }
-    console.log("Body to be sent:", body)
 
 
     const response = await fetch("http://127.0.0.1:3000/macros", {

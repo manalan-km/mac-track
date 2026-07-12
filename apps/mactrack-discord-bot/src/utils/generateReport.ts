@@ -13,7 +13,6 @@ export const generateReport = (responseData: reportResponse, mode: string) => {
     fibre = fibre + datum.fibre;
   });
 
-  console.log('Mode: ', mode);
   /* eslint-disable */
   return `\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*
 Date: ${todayDate}/${todayMonth}/${todayYear}

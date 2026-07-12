@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import type { Database } from "./types/database/database.types";
+import type { Database } from "./types/database/database.types.js";
 import dotenv from "dotenv";
 dotenv.config();
 const projectUrl = process.env.SUPABASE_PROJECT_URL ?? "";
