@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/mactrack-rest-api/Dockerfile
+    env_file:
+      - apps/mactrack-rest-api/.env
+    
+  discord-bot:
+    build:
+      context: .
+      dockerfile: apps/mactrack-discord-bot/Dockerfile
+    env_file: 
+      - apps/mactrack-discord-bot/.env
+    environment:
+      - BASE_URL=http://api:3000
