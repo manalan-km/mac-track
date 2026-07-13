@@ -1,5 +1,6 @@
 import { reportResponse } from '../types/apiResponse.js';
 export const generateReport = (responseData: reportResponse, mode: string) => {
+  console.log('Mode:', mode)
   const { startDate, endDate, data } = responseData;
   let calories = 0;
   let protein = 0;
