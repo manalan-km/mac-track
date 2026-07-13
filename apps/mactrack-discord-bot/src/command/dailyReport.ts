@@ -9,7 +9,6 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction: ChatInputCommandInteraction) {
   const url = BASE_URL + '/report?mode=today';
-  console.log('URL:', url);
   const response = await fetch(url, {
     method: 'GET',
   });

@@ -7,8 +7,7 @@ COPY turbo.json ./
 COPY packages/utils ./packages/utils
 COPY apps/mactrack-discord-bot apps/mactrack-discord-bot
 
-ENV BASE_URL="http://api:3000/"
 RUN corepack enable && pnpm install --frozen-lockfile
 RUN pnpm turbo build --filter=@mactrack/discord-bot
 
-RUN pnpm start 
+CMD ["node", "apps/mactrack-discord-bot/build/main.js"]

@@ -10,4 +10,4 @@ COPY apps/mactrack-rest-api apps/mactrack-rest-api
 RUN corepack enable && pnpm install --frozen-lockfile
 RUN pnpm turbo build --filter=@mactrack/rest-api
 
-RUN pnpm start 
+CMD ["pnpm","start"]
